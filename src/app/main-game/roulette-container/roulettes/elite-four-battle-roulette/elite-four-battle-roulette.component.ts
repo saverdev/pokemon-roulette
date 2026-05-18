@@ -79,7 +79,7 @@ export class EliteFourBattleRouletteComponent extends BaseBattleRouletteComponen
     }
   }
 
-  protected override onGameStateChange(state: string): void {
+  protected override async onGameStateChange(state: string): Promise<void> {
     if (state === 'elite-four-battle') {
       this.getCurrentElite();
       this.calcVictoryOdds();

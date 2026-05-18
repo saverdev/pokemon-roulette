@@ -80,7 +80,7 @@ export class GymBattleRouletteComponent extends BaseBattleRouletteComponent {
     }
   }
 
-  protected override onGameStateChange(state: string): void {
+  protected override async onGameStateChange(state: string): Promise<void> {
     if (state === 'gym-battle') {
       this.getCurrentLeader();
       this.calcVictoryOdds();

@@ -27,7 +27,7 @@ export class FindItemRouletteComponent {
     private itemService: ItemsService,
     private itemSpriteService: ItemSpriteService,
     private soundFxService: SoundFxService) {
-    this.items = itemService.getAllItems();
+    this.items = itemService.getRegularItems();
     this.itemFoundAudio = this.soundFxService.createItemFoundSoundFx();
   }
 
@@ -41,7 +41,7 @@ export class FindItemRouletteComponent {
     this.selectedItem = this.items[index];
 
     this.itemSpriteService.getItemSprite(this.selectedItem.name).pipe(take(1)).subscribe(response => {
-      if (this.selectedItem) {
+      if (this.selectedItem && response) {
         this.selectedItem.sprite = response.sprite;
       }
     });
