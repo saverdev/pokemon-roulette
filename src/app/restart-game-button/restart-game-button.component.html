@@ -1,19 +1,19 @@
-<button class="btn btn-primary w-100"
+<button class="btn btn-primary btn-game w-100 fw-bold rounded-3 py-2"
         (click)="showRestartGameConfirmModal()">
-    <ng-icon name="bootstrapArrowRepeat"></ng-icon> {{ 'game.restart.action' | translate }}
+    <ng-icon name="bootstrapArrowRepeat" class="me-1"></ng-icon> {{ 'game.restart.action' | translate }}
 </button>
 
 <ng-template #restartGameModal let-modal>
-	<div class="modal-body">
-        <h1>{{ 'game.restart.title' | translate }}</h1>
-        <div class="restart-panel">
-            <div class="message">
-                <p>{{ 'game.restart.warning' | translate }}</p>
+	<div class="modal-body text-center py-4">
+        <h2 class="fw-bold mb-3">{{ 'game.restart.title' | translate }}</h2>
+        <div class="restart-panel d-flex justify-content-center">
+            <div class="message mb-4 px-3">
+                <p class="mb-0">{{ 'game.restart.warning' | translate }}</p>
             </div>
         </div>
+        <div class="d-flex justify-content-center gap-3">
+            <button type="button" class="btn btn-primary fw-bold px-4 rounded-pill shadow-sm" (click)="confirmRestart()">{{ 'game.restart.confirm' | translate}}</button>
+            <button type="button" class="btn btn-danger fw-bold px-4 rounded-pill shadow-sm" (click)="closeModal()">{{ 'game.restart.cancel' | translate}} </button>
+        </div>
 	</div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-primary" (click)="confirmRestart()">{{ 'game.restart.confirm' | translate}}</button>
-        <button type="button" class="btn btn-danger" (click)="closeModal()">{{ 'game.restart.cancel' | translate}} </button>
-    </div>
 </ng-template>

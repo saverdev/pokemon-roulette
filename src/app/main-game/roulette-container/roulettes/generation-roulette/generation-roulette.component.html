@@ -1,13 +1,13 @@
-<h1 class="title">{{ 'game.main.roulette.generation.title' | translate }}</h1>
+<h1 class="title game-heading mb-4">{{ 'game.main.roulette.generation.title' | translate }}</h1>
 
 @if (!showChoiceButtons) {
   <app-wheel  #wheel
               [items]="generations"
               (selectedItemEvent)="onItemSelected($event)">
   </app-wheel>
-  <div class="choice-button-container">
+  <div class="choice-button-container mt-4">
     <button
-      class="btn choice-button"
+      class="btn btn-game choice-button rounded-pill shadow"
       [ngClass]="(darkMode | async) ? 'btn-outline-light' : 'btn-outline-dark'"
       (click)="toggleChoiceView()">
       {{ 'game.main.roulette.generation.chooseInstead' | translate }}
@@ -21,16 +21,18 @@
     @for (generation of generations; track $index) {
     <button 
       class="btn generation-button"
-      [style.background-color]="generation.fillStyle"
+      [style.border-color]="generation.fillStyle"
+      [style.background-color]="'transparent'"
       (click)="onGenerationChosen($index)">
       <div class="generation-text">{{ generation.text }}</div>
-      <div class="generation-region">{{ generation.region }}</div>
+      <div class="generation-region text-uppercase">{{ generation.region }}</div>
+      <div class="generation-glow" [style.background-color]="generation.fillStyle"></div>
     </button>
     }
   </div>
-  <div class="back-button-container">
+  <div class="back-button-container mt-4">
     <button
-      class="btn back-button"
+      class="btn btn-game back-button fw-bold rounded-pill px-4 py-2"
       [ngClass]="(darkMode | async) ? 'btn-outline-light' : 'btn-outline-dark'"
       (click)="toggleChoiceView()">
       {{ 'game.main.roulette.generation.backToWheel' | translate }}

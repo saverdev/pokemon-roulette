@@ -1,7 +1,7 @@
-<button type="button" class="btn"
+<button type="button" class="btn btn-game w-100"
   [ngClass]="(darkMode | async) ? 'btn-outline-light' : 'btn-outline-dark'"
   (click)="openPokedex()">
-  <ng-icon name="bootstrapBook"></ng-icon>
+  <ng-icon name="bootstrapBook" class="me-1"></ng-icon>
   {{ 'pokedex.button' | translate }}
 </button>
 
@@ -13,21 +13,21 @@
       (click)="closeModal()" aria-label="Close"></button>
   </div>
   <div class="modal-body" [ngClass]="(darkMode | async) ? 'bg-dark text-white' : ''">
-    <ul class="nav nav-tabs mb-2">
+    <ul class="nav nav-pills nav-fill mb-3 gap-2">
       <li class="nav-item">
-        <button class="nav-link" [class.active]="activeTab === 'local'"
+        <button class="nav-link rounded-pill" [class.active]="activeTab === 'local'"
                 (click)="activeTab = 'local'">
           {{ 'pokedex.tab.local' | translate: { region: currentRegion } }}
         </button>
       </li>
       <li class="nav-item">
-        <button class="nav-link" [class.active]="activeTab === 'national'"
+        <button class="nav-link rounded-pill" [class.active]="activeTab === 'national'"
                 (click)="activeTab = 'national'">
           {{ 'pokedex.tab.national' | translate }}
         </button>
       </li>
     </ul>
-    <p class="mb-2">
+    <p class="mb-3 text-center fw-bold">
       {{ 'pokedex.caught' | translate }} {{ caughtCount }} / {{ totalCount }}
     </p>
     <div class="pokedex-grid">

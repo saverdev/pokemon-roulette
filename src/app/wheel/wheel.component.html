@@ -1,19 +1,22 @@
-<div class="wheel-container">
-    <p>{{ currentSegment | translate }}</p>
-    <div class="canvas-container">
+<div class="wheel-container d-flex flex-column align-items-center my-4">
+    <p class="current-segment-text fw-bold mb-3 fs-4 text-center">{{ currentSegment | translate }}</p>
+    <div class="canvas-container position-relative d-flex justify-content-center align-items-center">
         <canvas id="wheel"
                 #wheel
+                class="wheel-canvas cursor-pointer shadow-lg rounded-circle"
                 [width]="wheelWidth"
                 [height]="canvasHeight"
                 (click)="spinWheel()">
         </canvas>
         <canvas id="pointer"
                 #pointer
+                class="pointer-canvas position-absolute top-50 translate-middle-y end-0"
                 [width]="cursorWidth"
-                [height]="canvasHeight">
+                [height]="canvasHeight"
+                style="pointer-events: none; z-index: 2; margin-right: -20px;">
         </canvas>
     </div>
-    <button class="btn my-3"
+    <button class="btn btn-lg px-5 py-2 mt-4 fw-bold rounded-pill shadow"
             [ngClass]="(darkMode | async) ? 'btn-light' : 'btn-dark'"
             (click)="spinWheel()">
             {{ 'wheel.spin' | translate }}

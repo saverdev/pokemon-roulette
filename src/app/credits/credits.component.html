@@ -1,44 +1,37 @@
-<div class="row">
-  <div class="col-12 col-sm-2">
-    <div class="row py-4">
-        <div class="col-6 col-sm-12 mb-2">
-            <app-main-game-button></app-main-game-button>
+<div class="top-navbar glass-navbar py-2 px-3 mb-4 d-flex flex-wrap gap-2 justify-content-center justify-content-md-start blur-shadow">
+    <app-main-game-button></app-main-game-button>
+    <app-coffee-button></app-coffee-button>
+</div>
+
+<div class="container d-flex justify-content-center mb-5 mw-100">
+    <div class="glass-panel p-4 rounded-4 text-white" style="max-width: 800px; text-align: justify;">
+        <h1 class="mt-sm-2 text-center game-heading">{{ 'credits.title' | translate }}</h1>
+
+        <div class="mt-4">
+            <h3 class="fw-bold game-heading fs-4">{{ 'credits.createdBy' | translate }}</h3>
+            <p>André Xavier Martinez</p>
+            <p>{{ 'credits.feedback' | translate }} <a href="https://twitter.com/zeroxm" target="_blank" class="text-info fw-bold">Twitter</a> or <a
+                href="https://bsky.app/profile/zeroxm.bsky.social" target="_blank" class="text-info fw-bold">Bluesky</a></p>
+            <p>{{ 'credits.inspiration1' | translate }} <a href="https://www.tiktok.com/@dartboyy" target="_blank" class="text-info fw-bold">dartboyy</a>. {{ 'credits.inspiration2' | translate}}</p>
         </div>
-        <div class="col-6 col-sm-12 mb-2">
-            <app-coffee-button></app-coffee-button>
+
+        <div class="mt-4">
+            <h3 class="fw-bold game-heading fs-4">{{ 'credits.specialThanks' | translate }}</h3>
+            <ul class="list-unstyled ms-3">
+                <li class="mb-2"><a href="https://twitter.com/AuranRage" target="_blank" class="text-info fw-bold">AuranRage</a> - {{ 'credits.thanks1' | translate }}</li>
+                <li class="mb-2"><a href="https://bsky.app/profile/rainbowrod.bsky.social" target="_blank" class="text-info fw-bold">Rod</a> - {{ 'credits.thanks2' | translate }}</li>
+                <li class="mb-2"><a href="https://github.com/Wpcedy" target="_blank" class="text-info fw-bold">Willian Pires da Conceição</a> - {{ 'credits.thanks3' | translate }}</li>
+                <li class="mb-2"><a href="https://github.com/1niceroli" target="_blank" class="text-info fw-bold">1nicerOli</a> - {{ 'credits.translationThanks' | translate }} ({{ 'credits.languageGerman' | translate }})</li>
+                <li class="mb-2"><a href="https://github.com/tbouvencourt" target="_blank" class="text-info fw-bold">tbouvencourt</a> - {{ 'credits.translationThanks' | translate }} ({{ 'credits.languageFrench' | translate }})</li>
+                <li class="mb-2"><a href="https://github.com/baptiste-gislot" target="_blank" class="text-info fw-bold">Baptiste Gislot</a> - {{ 'credits.translationThanks' | translate }} ({{ 'credits.languageFrench' | translate }})</li>
+                <li class="mb-2"><a href="https://github.com/PokeAPI/pokeapi" target="_blank" class="text-info fw-bold">PokéApi</a> - {{ 'credits.pokeapi' | translate }}</li>
+                <li class="mb-2"><a href="https://bulbapedia.bulbagarden.net/" target="_blank" class="text-info fw-bold">Bulbapedia</a> - {{ 'credits.bulbapedia' | translate }}</li>
+            </ul>
+            <p class="fst-italic opacity-75">{{ 'credits.images' | translate }}</p>
+        </div>
+        <div class="mt-4 text-center">
+            <h3 class="fw-bold game-heading fs-4">{{ 'credits.endThanks' | translate }}</h3>
+            <p>{{ 'credits.endWords' | translate }}</p>
         </div>
     </div>
-  </div>
-  <div class="col-12 col-sm-5">
-    <div class="container ">
-      <h1 class="mt-sm-5 text-center fw-bold">{{ 'credits.title' | translate }}</h1>
-
-      <div class="mt-4" style="text-align: justify;">
-        <h3 class="fw-bold">{{ 'credits.createdBy' | translate }}</h3>
-        <p>André Xavier Martinez</p>
-        <p>{{ 'credits.feedback' | translate }} <a href="https://twitter.com/zeroxm" target="_blank">Twitter</a> or <a
-            href="https://bsky.app/profile/zeroxm.bsky.social" target="_blank">Bluesky</a></p>
-        <p>{{ 'credits.inspiration1' | translate }} <a href="https://www.tiktok.com/@dartboyy" target="_blank">dartboyy</a>. {{ 'credits.inspiration2' | translate}}</p>
-      </div>
-
-      <div class="mt-4">
-        <h3 class="fw-bold">{{ 'credits.specialThanks' | translate }}</h3>
-        <ul class="list-unstyled">
-          <li><a href="https://twitter.com/AuranRage" target="_blank">AuranRage</a> - {{ 'credits.thanks1' | translate }}</li>
-          <li><a href="https://bsky.app/profile/rainbowrod.bsky.social" target="_blank">Rod</a> - {{ 'credits.thanks2' | translate }}</li>
-          <li><a href="https://github.com/Wpcedy" target="_blank">Willian Pires da Conceição</a> - {{ 'credits.thanks3' | translate }}</li>
-          <li><a href="https://github.com/1niceroli" target="_blank">1nicerOli</a> - {{ 'credits.translationThanks' | translate }} ({{ 'credits.languageGerman' | translate }})</li>
-          <li><a href="https://github.com/tbouvencourt" target="_blank">tbouvencourt</a> - {{ 'credits.translationThanks' | translate }} ({{ 'credits.languageFrench' | translate }})</li>
-          <li><a href="https://github.com/baptiste-gislot" target="_blank">Baptiste Gislot</a> - {{ 'credits.translationThanks' | translate }} ({{ 'credits.languageFrench' | translate }})</li>
-          <li><a href="https://github.com/PokeAPI/pokeapi" target="_blank">PokéApi</a> - {{ 'credits.pokeapi' | translate }}</li>
-          <li><a href="https://bulbapedia.bulbagarden.net/" target="_blank">Bulbapedia</a> - {{ 'credits.bulbapedia' | translate }}</li>
-        </ul>
-        <p>{{ 'credits.images' | translate }}</p>
-      </div>
-      <div class="mt-4">
-        <h3 class="fw-bold">{{ 'credits.endThanks' | translate }}</h3>
-        <p>{{ 'credits.endWords' | translate }}</p>
-      </div>
-    </div>
-  </div>
 </div>

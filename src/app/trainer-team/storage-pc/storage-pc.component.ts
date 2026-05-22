@@ -95,7 +95,8 @@ export class StoragePcComponent implements OnInit, OnDestroy {
           centered: true,
           size: 'lg',
           backdrop: 'static',
-          keyboard: false
+          keyboard: false,
+          windowClass: 'glass-modal'
         });
       }
     }

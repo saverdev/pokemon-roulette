@@ -1,12 +1,11 @@
 .pokedex-cell {
   position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   perspective: 200px;
   cursor: default;
-  flex-shrink: 0;
 }
 
 .pokedex-cell.light-cell {

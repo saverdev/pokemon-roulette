@@ -1,7 +1,7 @@
 <button type="button"
-        class="btn w-100"
+        class="btn btn-game w-100 fw-bold rounded-3 py-2"
         [ngClass]="(darkMode | async) ? 'btn-success' : 'btn-success'"
         (click)="goToSettings()">
-    <ng-icon name="bootstrapGear"></ng-icon>
+    <ng-icon name="bootstrapGear" class="me-1"></ng-icon>
     {{ 'settings.label' | translate }}
 </button>
